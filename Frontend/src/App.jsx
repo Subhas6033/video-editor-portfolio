@@ -1,10 +1,16 @@
 import React from 'react'
+import { Layout, Nav, Footer } from './Components/index'
+import {Outlet} from 'react-router-dom'
 
 const App = () => {
   return (
-    <div className='text-center'>
-      Testing on Production for deploying the project. Hope it works otherwise i have to fix again.
-    </div>
+    <Layout>
+      <Nav />
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
+    </Layout>
   )
 }
 
